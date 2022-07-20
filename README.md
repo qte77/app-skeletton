@@ -1,4 +1,4 @@
-# App skeleton
+# App Skeleton
 
 <a href="https://circleci.com/gh/badges/shields/tree/master">
     <img src="https://img.shields.io/circleci/project/github/badges/shields/master" alt="build status">
@@ -51,23 +51,23 @@ App skeleton to be used as github template repo.
 * [Inspirations](#inspirations-)
 * [Rescources](#resources-)
 
-## Usage [↑](#app-skeleton)
+## Usage [↑](#toc)
 
 * Usage
 
-## Install [↑](#app-skeleton)
+## Install [↑](#toc)
 
 * Install
 
-## Purpose [↑](#app-skeleton)
+## Purpose [↑](#toc)
 
 * Purpose
 
-## Reason [↑](#app-skeleton)
+## Reason [↑](#toc)
 
 * Reason
 
-## Paradigms [↑](#app-skeleton)
+## Paradigms [↑](#toc)
 
 * Keep to low branching factor and single outcomes
 * Export complex functions into modules
@@ -89,7 +89,7 @@ App skeleton to be used as github template repo.
   * Scalability Testing
   * Realeasable Outcome
 
-## App Structure [↑](#app-skeleton)
+## App Structure [↑](#toc)
 
 ```
 /
@@ -104,11 +104,11 @@ App skeleton to be used as github template repo.
 └─ file
 ```
 
-## App Details [↑](#app-skeleton)
+## App Details [↑](#toc)
 
 * Details
 
-## TODO [↑](#app-skeleton)
+## TODO [↑](#toc)
 
 * Structure
   * [x] Adopt [SemVer](https://semver.org/)
@@ -121,8 +121,7 @@ App skeleton to be used as github template repo.
     * [pipenv with Pipfile & Pipfile.lock](https://pipenv.pypa.io/en/latest/basics/)
     * `pipenv install -e` for [editable mode](https://pipenv.pypa.io/en/latest/basics/#a-note-about-vcs-dependencies), i.e. 'dependency resolution can be performed with an up to date copy of the repository each time it is performed'
   * [x] Use `Makefile` instead of self-implemented imparative `setup.sh`
-    * Implemented and functional
-    * Need improvement for local venv install, because `source` can not run inside `make`
+    * Test successful and functional
   * [ ] Dynamically create a hierarchical configuration with [hydra](https://hydra.cc/docs/intro/)
   * [ ] Implement basic CI/CD-Skeleton
   * [ ] Create /docs with [`sphinx`](https://www.sphinx-doc.org/) gh-action
@@ -130,24 +129,30 @@ App skeleton to be used as github template repo.
   * [x] Try `dataclass` and `field` from [`dataclasses`](https://docs.python.org/3/library/dataclasses.html)
     * Used to auto add special classes like `__init__`, `__str__`, `__repr__`
     * Suitable for more complex classes and projects
-  * [ ] Have a look at [PyTest](http://pytest.org/)
+  * [ ] Have a look at [PyTest](http://pytest.org/) to prepare for TDD and BDD
   * [ ] Consistent typing and type hinting
   * [ ] Use [`pydantic`](https://pydantic-docs.helpmanual.io/) for type hinting and errmsg
   * [ ] Consistent usage of pydoc for /docs with [`pandoc`](https://pypi.org/project/pandoc/)
   * [ ] Decouple concerns into separate containers, e.g. avoid big container because of `torch`
   * Uses type hinting and decorators
   * [ ] Consistent usage of `if` or `try` for features and catches
-  * [ ] Try [`arparse`](https://docs.python.org/3/library/argparse.html)
   * [ ] Try [`logging`](https://docs.python.org/3/howto/logging.html) instead of `print()`
+* API
+  * [ ] Try [`arparse`](https://docs.python.org/3/library/argparse.html)
+  * [ ] Implement basic API, e.g. with [gunicorn](https://github.com/benoitc/gunicorn) or [FastAPI](https://github.com/tiangolo/fastapi)
 * Dependency tracking and app sourcing
-  * [ ] Test `__init__.py` for pkg
+  * [x] Test `__init__.py` for packing
+    * Only needed for [regular packages Python 3.2 and earlier](https://docs.python.org/3/reference/import.html#regular-packages)
+    * Python 3.3 and above uses [namespace packages](https://docs.python.org/3/reference/import.html#namespace-packages), see [PEP 420 - Implicit Namespace Packages](https://peps.python.org/pep-0420/)
+  * [ ] Test conda [creating an environment from an environment.yml file](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-from-an-environment-yml-file)
+    * `conda env create -f environment.yml`  
   * [ ] Provide package as [single source app version](https://packaging.python.org/guides/single-sourcing-package-version/) with `setup.py`
   * [ ] Experiment with [`pyproject.toml`](https://pip.pypa.io/en/stable/reference/build-system/pyproject-toml/) to build app wheel
 * Best Practices
   * [ ] Adhere to [Docker BP](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/)
   * [ ] Adhere to BP from [The Hitchhiker’s Guide to Python!](https://docs.python-guide.org/)
 
- ## Inspirations [↑](#app-skeleton)
+ ## Inspirations [↑](#toc)
 
 * While-True-Do.io [Repo template](https://github.com/whiletruedoio/template)
 * Arc-Project [Pydantic](https://github.com/arc-community/arc)
@@ -155,7 +160,7 @@ App skeleton to be used as github template repo.
 * xformers [Conda env file](https://github.com/facebookresearch/xformers)
 * Jupyter [Notebook structure](https://github.com/jupyter/notebook)
 
-## Resources [↑](#app-skeleton)
+## Resources [↑](#toc)
 
 * Development
   * Dave Farley: [Test Driven Development vs Behavior Driven Development](https://www.youtube.com/watch?v=Bq_oz7nCNUA)

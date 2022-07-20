@@ -2,16 +2,20 @@
 #https://makefiletutorial.com/
 #https://devhints.io/makefile
 
-APP_PATH = ./app
-APP := $(APP_PATH)/pipeline.py
+HASH != git rev-parse --short HEAD
+IMG_BASE := ml-baseimage:$(HASH)
+IMG_USECASE := ml-usecase:$(HASH)
+IMG_USECASE_LOCAL := localhost:5000/$(IMG_USECASE)
+DOCKERFILE := ./Dockerfile
+APP_PATH := ./app
+APP_MAIN := $(APP_PATH)/app.py
+APP_PIPFILE := $(APP_PATH)/Pipfile
+KUBE := ./kubernetes/overlays
+KUBE_PROD := $(KUBE)/prod
+KUBE_TEST := $(KUBE)/test
 IPYNB := $(APP:$(APP_PATH)=$(APP_PATH)/ipynb,.py=.ipynb)
 PAPER_CFG := $(APP_PATH)/config/papermill-parameters.yml
-HELP := $(APP_PATH)/
-
-.PHONY: help
-
-help: README.md
-	@$(cat $^)
+HELP := $(APP_PATH)/README.md
 
 py_to_nb: $(APP)
 	jupytext --to ipynb $(APP)
@@ -48,12 +52,43 @@ clean_nb:
 
 setup_app:
 	python -c setup.py
+	
+python: $(APP_PIPFILE)
+	echo Installing Pipfile
+	/usr/bin/env python3 -m ensurepip
+	/usr/bin/env python3 -m pip install --upgrade pip setuptools pipenv
+	/usr/bin/env python3 -m pipenv install $(APP_PATH)
+	echo Starting app
+	/usr/bin/env python $(APP_MAIN)
 
-setup_py:
-	pip install -r requirements.txt
+build: $(DOCKERFILE)
+	podman build --target baseimage -t $(IMG_BASE) .
+	podman build --target usecase -t $(IMG_USECASE) .
 
-setup_py_dev:
-	pip install -r requirements-dev.txt
+get-reg:
+	podman container run -dt -p 5000:5000 --name registry \
+		--volume registry:/var/lib/registry:Z docker.io/library/registry:2
+
+serve:
+	build
+	get-reg
+	podman image tag $(IMG_USECASE) $(IMG_USECASE_LOCAL)
+	podman image push $(IMG_USECASE_LOCAL) --tls-verify=false
+	#podman image search localhost:5000/ --tls-verify=false
+	#podman image rm $(IMG_USECASE) $(IMG_USECASE_LOCAL)
+
+k8s-prod: $(KUBE_PROD)
+	serve
+	kubectl apply -k $(KUBE_PROD)
+
+k8s-test: $(KUBE_TEST)
+	podman-serve
+	kubectl apply -k $(KUBE_TEST)
+
+.PHONY: help
+
+help: $(HELP)
+	@$(cat $^)
 
 %: Makefile
 	help
