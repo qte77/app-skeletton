@@ -111,10 +111,6 @@ App skeleton to be used as github template repo.
 ## TODO [↑](#toc)
 
 * Structure
-  * [x] Adopt [SemVer](https://semver.org/)
-    * Using MAJOR.MINOR.PATCH (Breaking.Feature.Patch)
-  * [x] Adopt [CHANGELOG.md](https://keepachangelog.com/)
-    * Using Added, Removed, Changed and Unreleased inside CHANGELOG
   * [x] Test [Pipfile](https://pypi.org/project/pipfile/)
     * Adopted as [proposed successor](https://github.com/pypa/pipfile#the-concept) of requirements.txt
     * Several advantages like auto-venv and combined prod/dev in one TOML
@@ -131,7 +127,7 @@ App skeleton to be used as github template repo.
     * Suitable for more complex classes and projects
   * [ ] Have a look at [PyTest](http://pytest.org/) to prepare for TDD and BDD
   * [ ] Consistent typing and type hinting
-  * [ ] Use [`pydantic`](https://pydantic-docs.helpmanual.io/) for type hinting and errmsg
+  * [ ] Use [`pydantic`](https://pydantic-docs.helpmanual.io/) or [`traitlets`](https://pypi.org/project/traitlets/) for type hinting or strong typing
   * [ ] Consistent usage of pydoc for /docs with [`pandoc`](https://pypi.org/project/pandoc/)
   * [ ] Decouple concerns into separate containers, e.g. avoid big container because of `torch`
   * Uses type hinting and decorators
@@ -149,8 +145,15 @@ App skeleton to be used as github template repo.
   * [ ] Provide package as [single source app version](https://packaging.python.org/guides/single-sourcing-package-version/) with `setup.py`
   * [ ] Experiment with [`pyproject.toml`](https://pip.pypa.io/en/stable/reference/build-system/pyproject-toml/) to build app wheel
 * Best Practices
+  * [x] Adopt [SemVer](https://semver.org/)
+    * Using MAJOR.MINOR.PATCH (Breaking.Feature.Patch)
+  * [x] Adopt [`CHANGELOG.md`](https://keepachangelog.com/)
+    * Using `Added`, `Removed`, `Changed` and `Unreleased`
+    * Also recommended: `Deprecated`, `Fixed` and `Security`
+  * [x] Adopt [Semantic commit messages](https://www.conventionalcommits.org/)
+    * Purposful add human and machine readable meaning to commit messages
   * [ ] Adhere to [Docker BP](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/)
-  * [ ] Adhere to BP from [The Hitchhiker’s Guide to Python!](https://docs.python-guide.org/)
+  * [ ] Adhere to BP from [The Hitchhiker's Guide to Python!](https://docs.python-guide.org/)
 
  ## Inspirations [↑](#toc)
 
