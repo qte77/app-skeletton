@@ -1,0 +1,32 @@
+[tool.isort]
+profile = black
+multi_line_output = 3
+line_length = 88
+include_trailing_comma = true
+
+[tool.black]
+line_length = 88
+
+[tool.flake8]
+max-line-length = 88
+extend-ignore = E203
+
+[tool.pytest]
+addopts = --ignore=
+testpaths =
+    tests
+    
+markers =
+    examples: Test for cases not included in CI/CD yet
+
+[tool.bumpversion]
+current_version = 1.0.0
+commit = True
+tag = True
+sign_tags = True
+
+[tool.bumpversion:file:app/_version.py]
+
+[tool.bumpversion:file:CITATION.cff]
+
+# [tool.bumpversion:file:Copyright.txt]
