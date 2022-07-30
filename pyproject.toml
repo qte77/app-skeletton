@@ -11,14 +11,6 @@ line_length = 88
 max-line-length = 88
 extend-ignore = E203
 
-[tool.pytest]
-addopts = --ignore=
-testpaths =
-    tests
-    
-markers =
-    examples: Test for cases not included in CI/CD yet
-
 [tool.bumpversion]
 current_version = 1.0.0
 commit = True
@@ -30,3 +22,17 @@ sign_tags = True
 [tool.bumpversion:file:CITATION.cff]
 
 # [tool.bumpversion:file:Copyright.txt]
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "-ra -q"
+testpaths = [
+    "tests",
+    "integration",
+]
+markers = [
+    "requires_gpu: mark a test that requires a GPU to run.",
+    "slow: mark a test that takes a long time to run.",
+]
+log_format = %(asctime)s %(levelname)s %(message)s
+log_date_format = %Y-%m-%d %H:%M:%S

@@ -1,6 +1,8 @@
-#https://github.com/arc-community/arc/blob/master/.pre-commit-config.yaml
-#https://github.com/pre-commit/pre-commit-hooks
-#https://pre-commit.ci/
+# https://github.com/arc-community/arc/blob/master/.pre-commit-config.yaml
+# https://github.com/pre-commit/pre-commit-hooks
+# https://pre-commit.ci/
+# pre-commit and pyproject.toml
+# https://github.com/pre-commit/pre-commit/issues/1165#issuecomment-862603032
 ---
 exclude: 'build|stubs'
 
