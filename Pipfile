@@ -4,17 +4,17 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-hydra= "==1.2"
-omegaconf= "2.2.2"
+# hydra= "==1.2"
+# omegaconf= "2.2.2"
 
 [dev-packages]
-black = "==22.6.*"
-flake8 = "==4.0.*"
-isort = "==5.10.*"
-pytest = "==7.1.2"
-"pytest-cov" = "==3.0.0"
-tox = "==3.25.1"
-pre-commit = "==2.*"
+black = "*"
+flake8 = "*"
+isort = "*"
+pytest = "*"
+"pytest-cov" = "*"
+tox = "*"
+pre-commit = "*"
 
 [scripts]
 test = "pytest"

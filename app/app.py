@@ -1,9 +1,14 @@
 #!/usr/bin/env python
+# -*- coding: utf-8 -*-
+"""Entry point to the app"""
 
-class App():
-    print()
+from sys import exit
 
-main = launch_new_instance = App.launch_instance
+
+def main() -> None:
+    """Main function of the app"""
+    pass
+
 
 if __name__ == "__main__":
-    main()
+    exit(main())
