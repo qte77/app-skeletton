@@ -1,4 +1,5 @@
-# App Skeleton
+App Skeleton
+===
 
 <a href="https://circleci.com/gh/badges/shields/tree/master">
     <img src="https://img.shields.io/circleci/project/github/badges/shields/master" alt="build status">
@@ -30,15 +31,18 @@
 
 App skeleton to be used as github template repo.
 
-## Status
+Status
+---
 
-**[DRAFT]** **[WIP]**
+**[DRAFT]** **[WIP]** --> not fully implemented
 
-## Quickstart
+Quickstart
+---
 
 * Quickstart
 
-## TOC
+TOC
+---
 
 * [Usage](#usage-)
 * [Install](#install-)
@@ -51,23 +55,28 @@ App skeleton to be used as github template repo.
 * [Inspirations](#inspirations-)
 * [Rescources](#resources-)
 
-## Usage [↑](#toc)
+Usage [↑](#toc)
+---
 
-* Usage
+* TODO Usage
 
-## Install [↑](#toc)
+Install [↑](#toc)
+---
 
-* Install
+* TODO Install
 
-## Purpose [↑](#toc)
+Purpose [↑](#toc)
+---
 
-* Purpose
+* TODO Purpose
 
-## Reason [↑](#toc)
+Reason [↑](#toc)
+---
 
-* Reason
+* TODO Reason
 
-## Paradigms [↑](#toc)
+Paradigms [↑](#toc)
+---
 
 * Keep to low branching factor and single outcomes
 * Export complex functions into modules
@@ -89,9 +98,10 @@ App skeleton to be used as github template repo.
   * Scalability Testing
   * Realeasable Outcome
 
-## App Structure [↑](#toc)
+App Structure [↑](#toc)
+---
 
-```
+```sh
 /
 ├─ sub1/
 │  ├─ sub1sub1/
@@ -104,11 +114,13 @@ App skeleton to be used as github template repo.
 └─ file
 ```
 
-## App Details [↑](#toc)
+App Details [↑](#toc)
+---
 
 * Details
 
-## TODO [↑](#toc)
+TODO [↑](#toc)
+---
 
 * Structure
   * [x] Test [Pipfile](https://pypi.org/project/pipfile/)
@@ -121,6 +133,7 @@ App skeleton to be used as github template repo.
   * [ ] Dynamically create a hierarchical configuration with [hydra](https://hydra.cc/docs/intro/)
   * [ ] Implement basic CI/CD-Skeleton
   * [ ] Create /docs with [`sphinx`](https://www.sphinx-doc.org/) gh-action
+  * [ ] Have a look at [ReadTheDocs](http://docs.readthedocs.io/en/latest/yaml-config.html)
 * Coding
   * [x] Try `dataclass` and `field` from [`dataclasses`](https://docs.python.org/3/library/dataclasses.html)
     * Used to auto add special classes like `__init__`, `__str__`, `__repr__`
@@ -155,7 +168,8 @@ App skeleton to be used as github template repo.
   * [ ] Adhere to [Docker BP](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/)
   * [ ] Adhere to BP from [The Hitchhiker's Guide to Python!](https://docs.python-guide.org/)
 
- ## Inspirations [↑](#toc)
+Inspirations [↑](#toc)
+---
 
 * While-True-Do.io [Repo template](https://github.com/whiletruedoio/template)
 * Arc-Project [Pydantic](https://github.com/arc-community/arc)
@@ -163,8 +177,10 @@ App skeleton to be used as github template repo.
 * xformers [Conda env file](https://github.com/facebookresearch/xformers)
 * Jupyter [Notebook structure](https://github.com/jupyter/notebook)
 
-## Resources [↑](#toc)
+Resources [↑](#toc)
+---
 
 * Development
   * Dave Farley: [Test Driven Development vs Behavior Driven Development](https://www.youtube.com/watch?v=Bq_oz7nCNUA)
   * Dave Farley: [How to Build a DEPLOYMENT PIPELINE? (Continuous Delivery)](https://www.youtube.com/watch?v=x9l6yw1PFbs)
+  * Martin Fowler: []()
