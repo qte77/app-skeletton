@@ -84,7 +84,7 @@ Paradigms [↑](#toc)
   * Behavior Driven Design (What should it do?)
   * Test Driven Design (Does it do?)
 * Aims for code quality
-  * Works, i.e. passes tests which were written before 
+  * Works, i.e. passes tests which were written before
   * Modular and cohesive
   * Separation of concerns and appropriate coupling
   * Abstraction and information hiding
@@ -105,8 +105,8 @@ App Structure [↑](#toc)
 /
 ├─ sub1/
 │  ├─ sub1sub1/
-│  │  ├─ 
-│  │  └─ 
+│  │  ├─
+│  │  └─
 │  └─ file
 ├─ sub2/
 │  └─ file
@@ -154,7 +154,7 @@ TODO [↑](#toc)
     * Only needed for [regular packages Python 3.2 and earlier](https://docs.python.org/3/reference/import.html#regular-packages)
     * Python 3.3 and above uses [namespace packages](https://docs.python.org/3/reference/import.html#namespace-packages), see [PEP 420 - Implicit Namespace Packages](https://peps.python.org/pep-0420/)
   * [ ] Test conda [creating an environment from an environment.yml file](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-from-an-environment-yml-file)
-    * `conda env create -f environment.yml`  
+    * `conda env create -f environment.yml`
   * [ ] Provide package as [single source app version](https://packaging.python.org/guides/single-sourcing-package-version/) with `setup.py`
   * [ ] Experiment with [`pyproject.toml`](https://pip.pypa.io/en/stable/reference/build-system/pyproject-toml/) to build app wheel
 * Best Practices

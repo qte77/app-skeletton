@@ -177,4 +177,3 @@ If you want to run a MALA job on a slurm based machine, follow this outline as s
             #... module loading and such ...
 
             mpirun -np NUMBER_OF_NODES*MAX_NUMBER_OF_GPUS_PER_NODE -npernode MAX_NUMBER_OF_GPUS_PER_NODE -bind-to none -x NCCL_DEBUG=INFO -x LD_LIBRARY_PATH -x PATH -mca pml ob1 -mca btl ^openib python3 your_mala_script.py
-

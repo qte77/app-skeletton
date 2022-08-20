@@ -57,4 +57,3 @@ We actively welcome pull requests.
 
 ## License
 By contributing to MALA, you agree that your contributions will be licensed under the LICENSE file in the root directory of this source tree.
-

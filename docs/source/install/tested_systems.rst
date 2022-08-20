@@ -31,7 +31,7 @@ Ubuntu
 
 macOS
 ---------------
-* macOS 11.0.1 
+* macOS 11.0.1
 * OS version: 20.10
 * pip
 

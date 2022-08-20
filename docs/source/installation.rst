@@ -8,4 +8,3 @@ Installation
    install/external_modules
    install/on_cluster
    install/tested_systems
-

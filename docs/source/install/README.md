@@ -14,9 +14,9 @@ A list of machines on which MALA was tested can be found in [Successfully tested
 ## Using conda to manage dependencies (Recommended)
 
 While installing MALA from `pip` will install required packages, we recommend
-using [conda](https://docs.conda.io/en/latest/miniconda.html)  to install them 
-beforehand. However, using `pip` to resolve dependencies works as well 
-(see below). 
+using [conda](https://docs.conda.io/en/latest/miniconda.html)  to install them
+beforehand. However, using `pip` to resolve dependencies works as well
+(see below).
 
 We provide four different environment files, depending on the architecture and
 granularity of dependencies specified (find them in the `install` folder).
@@ -56,11 +56,11 @@ environment by replacing `3.6` with your desired version in `environment.yml`:
 
 ## Installation from pip
 
-When installing MALA via `pip`, all necessary packages are downloaded, 
-if they have not already been installed with e.g. `conda`. The exception to 
-this is `torch`.  We don't want `torch` to be installed automatically, as 
-users may have or want to work with special `torch` builds provided by their 
-HPC infrastructure. If you install MALA manually from scratch, make sure there 
+When installing MALA via `pip`, all necessary packages are downloaded,
+if they have not already been installed with e.g. `conda`. The exception to
+this is `torch`.  We don't want `torch` to be installed automatically, as
+users may have or want to work with special `torch` builds provided by their
+HPC infrastructure. If you install MALA manually from scratch, make sure there
 is a `torch` version available to python. For local testing, people
 might want to install the CPU-only version using something like
 
@@ -71,7 +71,7 @@ $ pip install torch==1.7.1+cpu torchvision==0.8.2+cpu \
 ```
 
 while a plain `pip install torch` will pull the much larger GPU version by
-default. For other ways to install PyTorch you might also refer 
+default. For other ways to install PyTorch you might also refer
 to <https://pytorch.org/>.
 
 Afterwards, MALA can easily be installed via
@@ -82,18 +82,18 @@ $ pip install -e .[options]
 ```
 
 The following options are available:
-- `dev`: Installs `bump2version` which is needed to correctly increment 
+- `dev`: Installs `bump2version` which is needed to correctly increment
   the version and thus needed for large code development
 - `opt`: Installs `oapackage` and `pqkmeans`, so that the orthogonal array
-  method may be used for hyperparameter optimization and clustered 
-  training data sets are accesible, both of which may be relevant if you 
+  method may be used for hyperparameter optimization and clustered
+  training data sets are accesible, both of which may be relevant if you
   plan to do large scale hyperparameter optimization
 - `test`: Installs `pytest` which allows users to test the code
 - `doc`: Installs all dependencies for building the documentary locally
 
-Similar to `torch`, MALA also uses optional packages which we do not include 
-in our general pip setup, as their configuration and/or installation is 
-generally more specific to the machine you operate on. Namely, MALA can be 
+Similar to `torch`, MALA also uses optional packages which we do not include
+in our general pip setup, as their configuration and/or installation is
+generally more specific to the machine you operate on. Namely, MALA can be
 used with:
 
 * `lammps`: Enables the calculation of descriptors, see [the instructions on external modules](external_modules.rst).
@@ -102,7 +102,7 @@ used with:
             packages as installation may be very specific to your setup)
 * `horovod`: Enables training parallelization (not installed alongside other
             packages as installation may be very specific to your setup)
-  
+
 MALA can be used without these packages, an error will only occur when attempting
 perform an operation these packages are crucial for. With the exception
 of `lammps` and `total_energy`, these packages can be installed using

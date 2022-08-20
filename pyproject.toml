@@ -19,7 +19,7 @@ src_paths = ["app", "tests"]
 [tool.flake8]
 max-line-length = 88
 # extend-ignore = "E203"
-doctests =true
+doctests = true
 statistics = true
 include = ["app", "tests"]
 max-complexity = 10
@@ -39,19 +39,3 @@ testpaths = [
 # ]
 log_format = "%(asctime)s %(levelname)s %(message)s"
 log_date_format = "%Y-%m-%d %H:%M:%S"
-
-[tool.towncrier]
-directory = "changes"
-filename = "NEWS.rst"
-
-[tool.bumpversion]
-current_version = 1.0.0
-commit = True
-tag = True
-sign_tags = True
-
-[tool.bumpversion:file:app/_version.py]
-
-[tool.bumpversion:file:CITATION.cff]
-
-# [tool.bumpversion:file:Copyright.txt]

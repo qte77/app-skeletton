@@ -54,12 +54,12 @@ py_to_html: $(IPYNB)
 # 		--resource-path=/home/srush/Projects/annotated-transformer/ \
 # 		--indented-code-classes=nohighlight
 
-clean_nb: 
+clean_nb:
 	rm -f $(IPYNB)
 
 setup_app:
 	python -c setup.py
-	
+
 python: $(APP_PIPFILE)
 	echo Installing Pipfile
 	/usr/bin/env python3 -m ensurepip
@@ -109,7 +109,7 @@ k8s-test: $(KUBE_TEST)
 
 # install: clean ## install the package to the active Python's site-packages
 # 	python setup.py install
-	
+
 # create_docs: nb_to_md
 # 	pandoc docs/header-includes.yaml the_annotated_transformer.md \
 # 		--katex=/usr/local/lib/node_modules/katex/dist/ \
